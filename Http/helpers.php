@@ -1,8 +1,8 @@
 <?php
 
-function list_testimonials(){
+function list_testimonials($limit = null){
 
-    return \Modules\Testimonial\Entities\Testimonial::where('status','=',1)->get();
+    return \Modules\Testimonial\Entities\Testimonial::where('status','=',1)->limit($limit)->get();
 }
 
 
